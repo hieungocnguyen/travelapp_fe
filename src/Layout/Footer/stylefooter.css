@@ -1,0 +1,38 @@
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+.footer{
+    flex-direction: column;
+    height: 250px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.logo-footer{
+    margin: 40px 0;
+}
+
+.logo-footer img{
+    width: 210px;
+}
+
+.hover:hover{
+    color: #F72585;
+}
+
+.contacts-footer{
+    margin-bottom: 40px;
+}
+
+.contacts-footer a{
+    color: black;
+    font-size: 40px;
+    margin: 0 15px;
+}
+
+.copyright-footer{
+    color: #F72585;
+    font-weight: 800;
+}

@@ -1,0 +1,1072 @@
+.home{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.map-home{
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 42px 0;
+    height: calc(100vh - 116px);
+}
+
+.map-home img{
+    width: 90%;
+}
+
+.element-map-home{
+    position: absolute;
+    bottom: 32%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100%;
+}
+
+.element-map-home .title-map-home{
+    font-size: 5vw;
+    font-weight: 800;
+    margin-bottom: 3.5rem;
+}
+
+.button-map-home,
+.buttonToTours-slide > div{
+    background-color: transparent;
+    border: 3px solid #F72585;
+    color: black;
+    padding: 12px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.1rem;
+    font-weight: 800;
+    border-radius: 16px;
+    transition: all 0.15s ease-in;
+    cursor: pointer;
+}
+
+.button-map-home:hover{
+    background-color: #F72585;
+    color: white;
+}
+
+.buttonToTours-slide > div:hover{
+    background-color: #F72585;
+    color: white;
+}
+
+.trending-check-slider{
+    font-size: 3vw;
+    font-weight: 800;
+    text-align: center;
+    margin: 50px 0;
+}
+
+.slider-home{
+    width: 100%;
+    margin: 0 auto;
+    height: 80vh;
+}
+
+.card-slick{
+    overflow: hidden;
+}
+
+.slick-slide > div{
+    margin: 0 15px;
+}
+
+.slick-list{
+    z-index: -1;
+    margin-left: 30px !important;
+}
+
+.slick-prev:before,
+.slick-next:before{
+    font-size: 50px !important;
+    color: #F72585 !important;
+    opacity: 1 !important;
+}
+
+.card-slick img.image-card-slick{
+    height: 40vh;
+    width: 60vw;
+    object-fit:cover;
+}
+
+.buttonToTours-slide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0 0 0 ;
+}
+
+
+
+.download-home{
+    margin: 80px auto;
+}
+
+.stat-home{
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.container-stat-home{
+    margin: 10px 20px;
+    border: 3px solid #F72585;
+    width: 140px;
+    height: 180px;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 16px;
+}
+
+.divine-container-stat{
+    width: 80%;
+    height: 3px;
+    background: #F72585;
+}
+
+.number-container-stat{
+    font-size: 48px;
+    color: black;
+    font-weight: 800;
+}
+
+.unit-container-stat{
+    font-size: 32px;
+    color: black;
+    font-weight: 800;
+}
+
+.slogan-stat-home{
+    font-size:60px;
+    font-weight: 800;
+    text-align: center;
+    margin: 50px 0 30px 0;
+}
+
+.appstore-stat-home{
+    text-align: center;
+}
+
+.store-badge{
+    padding: 20px;
+    cursor: pointer;
+}
+
+/* ========== END OF HOME STYLES =========== */
+
+/* ========== TOURS STYLES ============= */
+
+.tours{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.top-tours{
+    justify-content:space-between;
+    margin: 74px auto;
+    width: 80%;
+}
+
+.form-searchbar-tours{
+
+}
+
+.input-searchbar-tours{
+    width: 40vw;
+    padding: 15px;
+    border: 3px solid #F72585;
+    font-weight: 700;
+    outline: none;
+    margin-right: 22px;
+    font-size: 18px;
+    border-radius: 8px;
+}
+
+.submit-searchbar-tours{
+    width:61px;
+    height: 61px;
+    font-size: 32px;
+    border-radius: 8px;
+    border: none;
+    background: #F72585;
+    color: white;
+}
+
+#container-dropdown{
+    
+}
+
+#dropdown-basic{
+    padding:15px;
+    background: #F72585;
+    font-weight: 700;
+    outline: none;
+    border: none;
+    width: 180px;
+}
+
+.dropdown-childs{
+    width: 180px;
+}
+
+/* ----------- CATALOG TOURS ---------- */
+.container-catalog-tours{
+    margin-top:50px !important;
+    align-items: center;
+}
+
+.card-catalog-tours{
+    justify-content: center;
+    align-items: center;
+}
+
+.image-general-card img{
+    width: 240px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.content-card-catalog{
+    margin: 32px 20px;
+    padding: 40px 20px;
+    box-shadow: 0px 8px 5px rgba(247, 37, 133, 0.25);
+    border-radius: 8px;
+    border: 3px solid var(--color-primary);
+}
+
+.content-card-catalog div.just-a-line-card{
+    width: 80%;
+    height: 3px;
+    background: var(--color-primary);
+    margin:20px auto 10px
+}
+
+.general-card-catalog-tours{
+    margin:32px 0;
+}
+
+.info-general-card{
+    width: 240px;
+    height: 180px;
+    border: 2px solid #F72585;
+    margin-left: 20px;
+    padding: 18px;
+    border-radius: 8px;
+    font-weight: 700;
+    line-height: 180%;
+}
+
+.dateoftour-info-general-card{
+    font-size: 18px;
+    font-weight: 800;
+    color: #F72585;
+
+}
+
+.valueprice-info-general-card{
+    font-size: 18px;
+    font-weight: 800;
+    color: #F72585;
+}
+
+.title-card-catalog-tours{
+    font-size: 22px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.mdbutton-catalog-tours{
+    border: 3px solid var(--color-primary);
+    background: var(--color-primary);
+    color: white;
+    padding: 10px 48px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    transition: all 0.16s ease;
+}
+
+.mdbutton-catalog-tours:hover{
+    
+    background: white;
+    color: var(--color-primary);
+}
+
+.paginator-body-tours{
+    justify-content: center;
+    align-items: center;
+}
+
+.paginator-body-tours a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    margin: 20px;
+    background: white;
+    border: 2px solid #F72585;
+    font-size: 18px;
+    border-radius: 8px;
+    font-weight: 800;
+    color: #000000;
+}
+
+.paginator-body-tours a.active{
+    background: #F72585;
+    color: white;
+    pointer-events: none;
+}
+
+.paginator-body-tours a:hover{
+    color: #F72585;
+}
+
+/* ---------- DETAIL TOUR ---------- */
+.containerInfo-detail-tours{
+    margin-top: 24px;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.description-detail-tours{
+}
+
+.tag-detail-tours{
+}
+
+.feedback-detail-tours{
+}
+
+.pictures-detail-tours{
+}
+
+.thumbnail-container-detail-tours{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.thumbnail-container-detail-tours img{
+    width: 76%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    position: absolute;
+    top: -30%;
+    box-shadow:0px 8px 12px rgba(247, 37, 133, 0.25);
+}
+
+.overlay-thumbnail-container-detail-tours{
+    width: 76%;
+    height: 300px;
+    border-radius: 12px;
+    position: absolute;
+    top: -30%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 56.04%, #000000 100%);
+    z-index: 5;
+}
+
+
+.general-container-detail-tours{
+    width: 100%;
+    margin: 120px auto 100px;
+    padding: 220px 52px 52px 52px;
+    box-shadow: 0px 8px 12px rgba(247, 37, 133, 0.25);
+    border-radius: 12px;
+
+}
+
+.title-container-detail-tours{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    margin-bottom: 52px;
+    font-size: 32px;
+    text-align: center;
+}
+
+.info-container-detail-tours{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-container-detail-tours--label{
+    font-weight: 800;
+    font-size: 20px;
+    margin: 12px;
+}
+
+.info-container-detail-tours--label span{
+    color: #F72585;
+}
+
+.info-container-detail-tours--buttonBooking{
+    border: 2px solid #F72585;
+    display: block;
+    padding: 12px 0;
+    text-align: center;
+    height: 100%;
+    font-size: 20px;
+    font-weight: 700;
+    color: black;
+    border-radius: 8px;
+}
+
+.info-container-detail-tours--buttonBooking:hover{
+    color: white;
+    background: #F72585;
+}
+
+/* ----------- DESCRIPTION & TAG STYLE ------------- */
+.descriptionAndTag-detail-tours{
+    margin-bottom: 80px;
+}
+
+.description-detail-tours,
+.tag-detail-tours
+{
+    padding: 32px !important;
+    border-radius: 12px;
+    box-shadow: 0px 8px 12px rgba(247, 37, 133, 0.25);
+}
+
+.description-detailTours--title,
+.tag-detailTours--title{
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.description-detailTours--title{
+    padding: 12px;
+}
+.tag-detailTours--title{
+    padding-bottom: 12px;
+}
+
+.description-detailTours--content{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 180%;
+    text-indent: 50px;
+    padding: 12px;
+}
+
+.tag-detailTours--content{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 180%;
+    color: #F72585;
+}
+
+/* ----------- COMMENT STYLE ------------ */
+
+.feedback-detail-tours{
+    padding: 32px !important;
+    border-radius: 12px;
+    box-shadow: 0px 8px 12px rgba(247, 37, 133, 0.25);
+    margin-bottom: 80px;
+}
+
+.feedback-detailTour--commentContainer{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.feedback-detailTour--comment{
+    margin: 42px 0;
+}
+.comment-detailTour--avatar-userInfo{
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-size:cover !important;
+    margin-right: 12px;
+}
+
+.feedback-detailTour--title{
+    font-size: 24px;
+    font-weight: 800;
+    padding-bottom: 14px;
+}
+
+.comment-detailTour--username-userInfo{
+    font-weight: 700;
+    font-size: 16px;
+    color: #F72585;
+}
+
+.comment-detailTour--dayOfComment-userInfo{
+    font-size: 14px;
+}
+
+.comment-detailTour-contentComment{
+    padding-top: 12px;
+    font-weight: 500;
+    text-indent: 54px;
+    font-size: 18px;
+
+}
+/* ------------ ALBUM STYLE ------------ */
+
+.pictures-detail-tours{
+    padding: 32px !important;
+    border-radius: 12px;
+    box-shadow: 0px 8px 12px rgba(247, 37, 133, 0.25);
+    margin-bottom: 80px;
+}
+
+.pictures-detailTours--title{
+    font-size: 24px;
+    font-weight: 800;
+    padding-bottom: 14px;
+}
+
+.pictures-detailTours--album{
+    width: 90%;
+    margin: 32px auto;
+    justify-content: space-around;
+}
+
+.pictures-detailTours--album div{
+    position: relative;
+    width: 20%;
+    padding-top: 20%;
+    border-radius: 8px;
+    background: #F72585;
+
+}
+
+.pictures-detailTours--album div .pictures-detailTours--singlePic{
+    position:  absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+
+/* ============ NEWS STYLE ============ */
+
+.hotNews-container{
+    border-radius: 16px;
+    width: 100%;
+    height: 60vh;
+    min-height: 280px;
+    margin: 22px auto 24px auto !important;
+}
+
+.hotNews-container > div{
+    padding: 0 !important;
+    height: 100%;
+}
+
+.box--shadow{
+    box-shadow:0px 8px 10px rgba(247, 37, 133, 0.25);
+}
+
+
+
+.hotNews-container--link{
+    height: 100%;
+    width: 100%;
+}
+
+.hotNews-container--content{
+    background: blueviolet;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    object-fit: cover;
+    position: relative;
+}
+
+.hotNews-container--image{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+
+.hotNews-container--content::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 43.54%, #000000 100%);
+    z-index: 25;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hotNews-container-author{
+    position: absolute;
+    bottom: 18px;
+    left: 24px;
+    color: white;
+    z-index: 30;
+}
+
+.author-hotNews-dayUpload{
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.author-hotNews-title{
+    font-weight: 800;
+    font-size: 36px;
+}
+
+.author-hotNews-nameAuthor{
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.author-otherNews-title{
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.otherNews-container{
+    margin-bottom: 42px;
+}
+
+.childNews-container{
+    border-radius: 16px;
+    height: 36vh;
+    min-height: 210px;
+    margin: 16px auto !important;
+}
+
+.childNews-container--content{
+    background: blueviolet;
+    width: 100%;
+    height: 100%;
+    border-radius: 14px;
+}
+
+
+/* ================ DETAIL NEWS STYLE ================ */
+
+.main-detailNews--container{
+    width: 90%;
+    margin: 0 auto 64px;
+    border-radius: 16px;
+    box-shadow: 0px 8px 12px rgba(247, 37, 133, 0.25);
+}
+
+.main-detailNews--post{
+    padding: 72px 64px 42px;
+}
+
+.post-main--title{
+    font-weight: 800;
+    font-size: 64px;
+    line-height: 81px;
+}
+
+.post-main--divineLine{
+    width: 80%;
+    height: 5px;
+    background-color: #000000;
+    margin: 32px 0;
+}
+
+.post-main--content{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 180%;
+}
+
+.post-main--footer{
+    justify-content: space-between;
+    margin: 32px 0;
+}
+
+.footer-post--infoPost{
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.footer-post--likeButton{
+    font-size: 60px;
+    cursor: pointer;
+}
+
+
+
+.comment-detailNews--container{
+    width: 90%;
+    margin: 0 auto 64px;
+    border-radius: 16px;
+    box-shadow: 0px 8px 12px rgba(247, 37, 133, 0.25);
+}
+
+.comment-detailNews{
+    padding: 72px 64px 42px;
+}
+
+.comment-detailNews--title{
+    font-weight: 800;
+    font-size: 24px;
+}
+
+.comment-detailNews--content{
+    margin-top: 56px;
+}
+
+.infoUser-itemComment-avatar{
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.infoUser-itemComment-avatarImage{
+
+}
+
+.comment-content--item{
+    margin: 40px 0;
+}
+
+.item-comment--infoUser{
+    display: flex;
+}
+
+.infoUser-itemComment-userDate{
+    margin-left: 12px;
+}
+.infoUser-itemComment-username{
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.infoUser-itemComment-dateOfComment{
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.item-comment--commentText{
+    font-weight: 500;
+    font-size: 24px;
+    margin-top: 12px;
+}
+
+.relatedNews-detailNews-container{
+    width: 90%;
+    margin: 0 auto 64px;
+    border-radius: 16px;
+    box-shadow: 0px 8px 12px rgba(247, 37, 133, 0.25);
+}
+
+.relatedNews-detailNews{
+    padding: 72px 64px 42px;
+}
+
+.relatedNews-detailNews--content{
+    display: flex;
+    margin-top: 20px;
+    
+}
+
+.relatedNews-detailNews--title{
+    font-weight: 800;
+    font-size: 24px;
+}
+
+.relatedNews-detailNews--news{
+    width: 50%;
+    height: 260px;
+    overflow: hidden;
+    margin: 20px;
+    border-radius: 8px;
+}
+
+@media screen and (max-width:840px) {
+    .relatedNews-detailNews--content{
+        flex-wrap: wrap;
+    }
+    .relatedNews-detailNews--news{
+        width: 100%;
+    }
+}
+
+
+/* ========== MODEL LOGIN STYLE ============= */
+.login-model--background{
+    position: absolute;
+    top: 84px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: white;
+    box-shadow: 0px 12px 10px rgba(247, 37, 133, 0.25);
+    border-radius: 8px;
+    z-index: 30;
+
+}
+
+.login-modalContainer--close{
+    display: flex;
+    justify-content: right;
+    margin: 12px 46px 0px;
+}
+
+.login-modalContainer--closeButton{
+    outline: none;
+    color: var(--color-primary);
+    background-color: white;
+    border: none;
+    font-size: 32px;
+}
+
+.login-modalContainer--closeButton:hover{
+    color: #000000;
+}
+
+.login-model--container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 66px 32px;
+}
+
+.login-modelContainer--title{
+    font-size: 36px;
+    line-height: 46px;
+    text-align: center;
+    font-weight: 800;
+}
+
+.login-modelContainer--loginPanel{
+    
+}
+
+.loginPanel-login--usernameField{
+    margin: 18px auto;
+}
+
+.usernameField-loginPanel--username{
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.usernameField-loginPanel--inputUsername{
+    border: 3px solid #F72585;
+    border-radius: 12px;
+    width: 387px;
+    height: 51px;
+    padding: 20px;
+    outline: none;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.loginPanel-login--buttonLogin{
+    margin: 24px;
+    text-align: center;
+}
+
+.buttonLogin-loginPanel-submit{
+    border: 3px solid #F72585;
+    border-radius: 8px;
+    width: 187px;
+    height: 40px;
+    background-color: white;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.loginPanel-login--resetPassword{
+    font-weight: 700;
+    font-size: 20px;
+    color: #000000;
+    display: flex;
+    justify-content: center;
+}
+
+.loginPanel-login--resetPassword:hover{
+    color: var(--color-primary);
+}
+
+.login-modelContainer--divine{
+    width: 80%;
+    height: 3px;
+    background:#F72585;
+    margin: 12px auto;
+}
+
+.loginOtherWay-login-title,
+.signOnOtherWay-signOn-title{
+    font-weight: 800;
+    font-size: 24px;
+    text-align: center;
+}
+
+.loginOtherWay-login-buttonsLogin{
+    text-align: center;
+}
+
+.buttonsLogin-loginOtherWay--facebook a{
+    width: 340px;
+    height: 44px;
+    background: #3F37C9;
+    border-radius: 6px;
+    color: white;
+    margin: 12px auto;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.buttonsLogin-loginOtherWay--google a{
+    width: 340px;
+    height: 44px;
+    background: #FF3A44;
+    border-radius: 6px;
+    color: white;
+    margin: 20px auto;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+/* =========== SIGN ON STYLE =========== */
+
+.signOn--modal{
+    position: absolute;
+    top: 84px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: white;
+    box-shadow: 0px 12px 10px rgba(247, 37, 133, 0.25);
+    border-radius: 8px;
+    z-index: 30;
+}
+
+.signOn-Modal--close{
+    display: flex;
+    justify-content: right;
+    margin: 12px 46px 0px;
+}
+
+.signOn-Modal--closeButton{
+    outline: none;
+    color: var(--color-primary);
+    background-color: white;
+    border: none;
+    font-size: 32px;
+}
+
+.signOn-Modal--title{
+    font-size: 36px;
+    line-height: 46px;
+    text-align: center;
+    font-weight: 800;
+}
+
+.signOn-Modal--container{
+    margin: 0px 66px 32px;
+}
+
+.signOn-Modal--main{
+    display: flex;
+}
+
+.inputPanel-signOn--usernameField{
+    margin: 18px auto;
+}
+
+.usernameField-inputPanel--username{
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.usernameField-inputPanel--inputUsername{
+    border: 3px solid #F72585;
+    border-radius: 12px;
+    width: 387px;
+    height: 51px;
+    padding: 20px;
+    outline: none;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.signOn-modal--divine{
+    width: 4px;
+    height: 480px;
+    background: var(--color-primary);
+    margin: 24px 32px;
+}
+
+.inputPanel-signOn--buttonLogin{
+    margin: 24px;
+    text-align: center;
+}
+
+.buttonSignOn-inputPanel-submit{
+    border: 3px solid #F72585;
+    border-radius: 8px;
+    width: 187px;
+    height: 40px;
+    background-color: white;
+    font-weight: 700;
+    font-size: 20px;
+
+}
+
+.buttonSignOn-inputPanel-submit:hover{
+    background: var(--color-primary);
+    color: white;
+}
+
+.inputPanel-signOn--resetPassword{
+    font-weight: 700;
+    font-size: 20px;
+    color: #000000;
+    display: flex;
+    justify-content: center;
+}
+
+.inputPanel-signOn--resetPassword:hover{
+    color: var(--color-primary);
+}
+
+.buttonsSignOn-signOnOtherWay--facebook a{
+    width: 340px;
+    height: 44px;
+    background: #3F37C9;
+    border-radius: 6px;
+    color: white;
+    margin: 12px auto;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.buttonsSignOn-signOnOtherWay--google a{
+    width: 340px;
+    height: 44px;
+    background: #FF3A44;
+    border-radius: 6px;
+    color: white;
+    margin: 20px auto;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
