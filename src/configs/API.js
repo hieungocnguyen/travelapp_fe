@@ -6,6 +6,8 @@ export let endpoints = {
    current_user: "/users/current_user/",
    oauth2_info: "/oauth2_info/",
    login: "/o/token/",
+   tours: "/tours/",
+   tags: "/tags/",
 };
 
 export const authAxios = () =>

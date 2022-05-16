@@ -20,8 +20,8 @@ const LoginModel = ({ closeModal }) => {
             client_id: "C7yBw5T73TgxfdUmBLR4fCA5JEJ0gMEWnLF8O6SV",
             client_secret:
                "bkyn0d0W73zIZdJ4Nd5rJFMwtizbTSelrWZXQYlCNIMPgWzBblL78tw1ZtW1VSxtjBA8ZZw70YKcYiI5A4mvLYvDk8cIYWKjrQpR95jvHxpEXaFg0hclvpny7FSupy72",
-            username: "hieuadmin",
-            password: "123456",
+            username: username,
+            password: password,
             grant_type: "password",
          });
 
