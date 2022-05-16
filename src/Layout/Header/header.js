@@ -16,14 +16,14 @@ const Header = (props) => {
 
    const [user, dispatch] = useContext(UserContext);
 
-   useEffect(() => {
-      const loadClientKey = async () => {
-         const res = await API.get(endpoints["oauth2_info"]);
-         setClientId(res.data.client_id);
-         setClientSecret(res.data.client_secret);
-      };
-      loadClientKey();
-   }, []);
+   // useEffect(() => {
+   //    const loadClientKey = async () => {
+   //       const res = await API.get(endpoints["oauth2_info"]);
+   //       setClientId(res.data.client_id);
+   //       setClientSecret(res.data.client_secret);
+   //    };
+   //    loadClientKey();
+   // }, []);
 
    const logout = (event) => {
       event.preventDefault();

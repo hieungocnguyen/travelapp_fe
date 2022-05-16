@@ -616,7 +616,7 @@
     bottom: 18px;
     left: 24px;
     color: white;
-    z-index: 30;
+    z-index: 28;
 }
 
 .author-hotNews-dayUpload{
@@ -1077,9 +1077,52 @@
     height: 50px;
     overflow: hidden;
     border-radius: 50%;
+    border: 4px solid var(--color-primary);
 }
 
 .user-Header-avatar{
     width: 100%;
     height: 100%;
+}
+
+
+/* =========== RECOVERY PASSWORD =========== */
+.recoveryPassword--container{
+    text-align: center;
+    height: 300px;
+    margin-top: 24px;
+}
+
+.form-recoveryPassword{
+}
+
+.title-recoveryPassword{
+    font-weight: 800;
+    margin-bottom: 34px;
+}
+
+.inputEmail-recoveryPassword{
+    display: block;
+    margin: 20px auto;
+    outline: none;
+    border: 3px solid var(--color-primary);
+    padding: 10px 16px;
+    width: 480px;
+    border-radius: 8px;
+    font-weight:700;
+}
+
+.button-recoveryPassword{
+    padding: 6px 18px;
+    background: white;
+    color: var(--color-primary);
+    border:3px solid var(--color-primary);
+    border-radius: 8px;
+    font-weight:700;
+    margin-top: 8px;
+}
+
+.button-recoveryPassword:hover{
+    background: var(--color-primary);
+    color: white;
 }

@@ -11,11 +11,13 @@ import DetailNew from "./Components/DetailNew";
 import API, { endpoints } from "./configs/API";
 import { createContext, useEffect, useReducer, useState } from "react";
 import myReducer from "./Reducers/MyReducer";
+import cookies from "react-cookies";
+import RecoveryPassword from "./Components/RecoveryPassword";
 
 export const UserContext = createContext();
 
 function App() {
-   const [user, dispatch] = useReducer(myReducer);
+   const [user, dispatch] = useReducer(myReducer, cookies.load("current_user"));
 
    return (
       <BrowserRouter>
@@ -27,6 +29,7 @@ function App() {
                <Route path="/news" element={<News />} />
                <Route path="/tours/1" element={<DetailTour />} />
                <Route path="/news/1" element={<DetailNew />} />
+               <Route path="/recovery/" element={<RecoveryPassword />} />
             </Routes>
             <Footer logo={logoBrand} />
          </UserContext.Provider>
