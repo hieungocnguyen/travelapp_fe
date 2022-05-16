@@ -18,10 +18,6 @@
     width: 210px;
 }
 
-.hover:hover{
-    color: #F72585;
-}
-
 .contacts-footer{
     margin-bottom: 40px;
 }
@@ -33,6 +29,6 @@
 }
 
 .copyright-footer{
-    color: #F72585;
+    color: var(--color-primary);
     font-weight: 800;
 }

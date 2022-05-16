@@ -33,7 +33,7 @@
 .button-map-home,
 .buttonToTours-slide > div{
     background-color: transparent;
-    border: 3px solid #F72585;
+    border: 3px solid var(--color-primary);
     color: black;
     padding: 12px 50px;
     text-align: center;
@@ -47,12 +47,12 @@
 }
 
 .button-map-home:hover{
-    background-color: #F72585;
+    background-color: var(--color-primary);
     color: white;
 }
 
 .buttonToTours-slide > div:hover{
-    background-color: #F72585;
+    background-color: var(--color-primary);
     color: white;
 }
 
@@ -85,7 +85,7 @@
 .slick-prev:before,
 .slick-next:before{
     font-size: 50px !important;
-    color: #F72585 !important;
+    color: var(--color-primary) !important;
     opacity: 1 !important;
 }
 
@@ -115,7 +115,7 @@
 
 .container-stat-home{
     margin: 10px 20px;
-    border: 3px solid #F72585;
+    border: 3px solid var(--color-primary);
     width: 140px;
     height: 180px;
     display: flex;
@@ -128,7 +128,7 @@
 .divine-container-stat{
     width: 80%;
     height: 3px;
-    background: #F72585;
+    background: var(--color-primary);
 }
 
 .number-container-stat{
@@ -181,7 +181,7 @@
 .input-searchbar-tours{
     width: 40vw;
     padding: 15px;
-    border: 3px solid #F72585;
+    border: 3px solid var(--color-primary);
     font-weight: 700;
     outline: none;
     margin-right: 22px;
@@ -195,7 +195,7 @@
     font-size: 32px;
     border-radius: 8px;
     border: none;
-    background: #F72585;
+    background: var(--color-primary);
     color: white;
 }
 
@@ -205,7 +205,7 @@
 
 #dropdown-basic{
     padding:15px;
-    background: #F72585;
+    background: var(--color-primary);
     font-weight: 700;
     outline: none;
     border: none;
@@ -237,7 +237,7 @@
 .content-card-catalog{
     margin: 32px 20px;
     padding: 40px 20px;
-    box-shadow: 0px 8px 5px rgba(247, 37, 133, 0.25);
+    box-shadow: 2px 10px 15px rgb(18, 78, 254, 0.2);
     border-radius: 8px;
     border: 3px solid var(--color-primary);
 }
@@ -256,7 +256,7 @@
 .info-general-card{
     width: 240px;
     height: 180px;
-    border: 2px solid #F72585;
+    border: 2px solid var(--color-primary);
     margin-left: 20px;
     padding: 18px;
     border-radius: 8px;
@@ -267,14 +267,14 @@
 .dateoftour-info-general-card{
     font-size: 18px;
     font-weight: 800;
-    color: #F72585;
+    color: var(--color-primary);
 
 }
 
 .valueprice-info-general-card{
     font-size: 18px;
     font-weight: 800;
-    color: #F72585;
+    color: var(--color-primary);
 }
 
 .title-card-catalog-tours{
@@ -315,7 +315,7 @@
     height: 36px;
     margin: 20px;
     background: white;
-    border: 2px solid #F72585;
+    border: 2px solid var(--color-primary);
     font-size: 18px;
     border-radius: 8px;
     font-weight: 800;
@@ -323,13 +323,13 @@
 }
 
 .paginator-body-tours a.active{
-    background: #F72585;
+    background: var(--color-primary);
     color: white;
     pointer-events: none;
 }
 
 .paginator-body-tours a:hover{
-    color: #F72585;
+    color: var(--color-primary);
 }
 
 /* ---------- DETAIL TOUR ---------- */
@@ -410,11 +410,11 @@
 }
 
 .info-container-detail-tours--label span{
-    color: #F72585;
+    color: var(--color-primary);
 }
 
 .info-container-detail-tours--buttonBooking{
-    border: 2px solid #F72585;
+    border: 2px solid var(--color-primary);
     display: block;
     padding: 12px 0;
     text-align: center;
@@ -427,7 +427,7 @@
 
 .info-container-detail-tours--buttonBooking:hover{
     color: white;
-    background: #F72585;
+    background: var(--color-primary);
 }
 
 /* ----------- DESCRIPTION & TAG STYLE ------------- */
@@ -468,7 +468,7 @@
     font-size: 18px;
     font-weight: 500;
     line-height: 180%;
-    color: #F72585;
+    color: var(--color-primary);
 }
 
 /* ----------- COMMENT STYLE ------------ */
@@ -505,7 +505,7 @@
 .comment-detailTour--username-userInfo{
     font-weight: 700;
     font-size: 16px;
-    color: #F72585;
+    color: var(--color-primary);
 }
 
 .comment-detailTour--dayOfComment-userInfo{
@@ -545,7 +545,7 @@
     width: 20%;
     padding-top: 20%;
     border-radius: 8px;
-    background: #F72585;
+    background: var(--color-primary);
 
 }
 
@@ -604,7 +604,7 @@
     content: "";
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 43.54%, #000000 100%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 62.54%, #124efe 140%);
     z-index: 25;
     position: absolute;
     top: 0;
@@ -865,7 +865,7 @@
 }
 
 .usernameField-loginPanel--inputUsername{
-    border: 3px solid #F72585;
+    border: 3px solid var(--color-primary);
     border-radius: 12px;
     width: 387px;
     height: 51px;
@@ -881,7 +881,7 @@
 }
 
 .buttonLogin-loginPanel-submit{
-    border: 3px solid #F72585;
+    border: 3px solid var(--color-primary);
     border-radius: 8px;
     width: 187px;
     height: 40px;
@@ -905,7 +905,7 @@
 .login-modelContainer--divine{
     width: 80%;
     height: 3px;
-    background:#F72585;
+    background:var(--color-primary);
     margin: 12px auto;
 }
 
@@ -996,7 +996,7 @@
 }
 
 .usernameField-inputPanel--inputUsername{
-    border: 3px solid #F72585;
+    border: 3px solid var(--color-primary);
     border-radius: 12px;
     width: 387px;
     height: 51px;
@@ -1019,7 +1019,7 @@
 }
 
 .buttonSignOn-inputPanel-submit{
-    border: 3px solid #F72585;
+    border: 3px solid var(--color-primary);
     border-radius: 8px;
     width: 187px;
     height: 40px;
@@ -1077,7 +1077,6 @@
     height: 50px;
     overflow: hidden;
     border-radius: 50%;
-    border: 4px solid var(--color-primary);
 }
 
 .user-Header-avatar{
