@@ -25,7 +25,7 @@
     font-weight: 800;
     font-size: 22px;
     color: black;
-    transition: all 0.15s ease-in;
+    transition: all 0.1s ease-in;
     white-space: nowrap;
 }
 
@@ -46,5 +46,5 @@
 }
 
 .hover:hover{
-    color: #F72585;
+    color: var(--color-primary);
 }

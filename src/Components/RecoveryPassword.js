@@ -10,17 +10,22 @@ const RecoveryPassword = () => {
 
    const checkMail = async (event) => {
       event.preventDefault();
-      const code = await API.post(
-         endpoints["recoveryPass"],
-         { email: email },
-         {
-            headers: {
-               "Content-Type": "multipart/form-data",
-            },
-         }
-      );
-      console.log(code.data);
-      setConfirm();
+      try {
+         const code = await API.post(
+            endpoints["recoveryPass"],
+            { email: email },
+            {
+               headers: {
+                  "Content-Type": "multipart/form-data",
+               },
+            }
+         );
+         console.log(code.data);
+         setConfirm();
+      } catch (error) {
+         console.log(error);
+         alert("Your email does not exist");
+      }
    };
    const confirmPassword = async (event) => {
       event.preventDefault();
@@ -39,7 +44,7 @@ const RecoveryPassword = () => {
             console.log(sendConfirmCode.data);
             nav("/");
 
-            alert("Mat khau moi cua ban chinh la confirm code");
+            alert("Your new password is confirm code");
          }
       } catch (error) {
          console.info(error);
