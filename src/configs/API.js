@@ -8,6 +8,8 @@ export let endpoints = {
    login: "/o/token/",
    tours: "/tours/",
    tags: "/tags/",
+   recoveryPass: "/users/reset_password/",
+   confirmPass: "/users/reset_password/confirm/",
 };
 
 export const authAxios = () =>

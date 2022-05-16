@@ -16,10 +16,10 @@ const LoginModel = ({ closeModal }) => {
       event.preventDefault();
 
       try {
+         const clientKey = await API.get(endpoints["oauth2_info"]);
          const res = await API.post(endpoints["login"], {
-            client_id: "C7yBw5T73TgxfdUmBLR4fCA5JEJ0gMEWnLF8O6SV",
-            client_secret:
-               "bkyn0d0W73zIZdJ4Nd5rJFMwtizbTSelrWZXQYlCNIMPgWzBblL78tw1ZtW1VSxtjBA8ZZw70YKcYiI5A4mvLYvDk8cIYWKjrQpR95jvHxpEXaFg0hclvpny7FSupy72",
+            client_id: clientKey.data.client_id,
+            client_secret: clientKey.data.client_secret,
             username: username,
             password: password,
             grant_type: "password",
@@ -90,7 +90,13 @@ const LoginModel = ({ closeModal }) => {
                            Log in
                         </button>
                      </div>
-                     <Link to="/" className="loginPanel-login--resetPassword">
+                     <Link
+                        to="/recovery"
+                        className="loginPanel-login--resetPassword"
+                        onClick={() => {
+                           closeModal(false);
+                        }}
+                     >
                         Dont remember password
                      </Link>
                   </div>
