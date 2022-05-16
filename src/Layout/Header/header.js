@@ -5,6 +5,7 @@ import LoginModel from "../../Components/LogIn";
 import SignOnModal from "../../Components/SignOn";
 import API, { endpoints } from "../../configs/API";
 import "./styleheader.css";
+import cookies from "react-cookies";
 
 const Header = (props) => {
    const [openModalSignIn, setOpenModalSignIn] = useState(false);
@@ -23,6 +24,13 @@ const Header = (props) => {
       };
       loadClientKey();
    }, []);
+
+   const logout = (event) => {
+      event.preventDefault();
+      cookies.remove("access_token");
+      cookies.remove("current_user");
+      dispatch({ type: "logout" });
+   };
 
    let replaceRightPart = //phan nay la default right part header
       (
@@ -57,22 +65,29 @@ const Header = (props) => {
                   setOpenModalSignIn(true);
                }}
             >
-               Username
+               {user.username}
             </a>
-            <a
-               href="#"
-               className="signout-right-header hover"
-               onClick={() => {
-                  setOpenModalSignOn(true);
-               }}
-            >
-               Avatar
+            <a href="#" className="signout-right-header hover" onClick={logout}>
+               <div className="user-Header-avatarContainer">
+                  <img
+                     src={user.avatar_path}
+                     alt="avatar-user"
+                     className="user-Header-avatar"
+                  />
+               </div>
             </a>
          </>
       );
    }
    return (
       <>
+         {/* <ul>
+            <li>
+               <a href="{% url 'social:begin' 'google-oauth2' %}?next={{ request.path }}">
+                  Login with Google
+               </a>
+            </li>
+         </ul> */}
          <div className="header flex">
             <div className="left-header flex">
                <Link to="/tours" className="tours-left-header hover">

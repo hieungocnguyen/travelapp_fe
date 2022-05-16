@@ -3,6 +3,8 @@ import { AiOutlineSearch } from "react-icons/ai";
 import "bootstrap/dist/css/bootstrap.css";
 import CatalogTours from "./CatalogTours";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import API, { endpoints } from "../configs/API";
 
 const Tours = () => {
    return (

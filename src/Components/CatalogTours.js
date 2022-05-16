@@ -1,13 +1,25 @@
+import { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import API, { endpoints } from "../configs/API";
 import { dataPictures } from "../dataPicture";
 
 const CatalogTours = () => {
+   const [tours, setTours] = useState([]);
+
+   useEffect(() => {
+      const loadTours = async () => {
+         const res = await API.get(endpoints["tags"]);
+         setTours(res.data.results);
+         console.log(res.data.results);
+      };
+      loadTours();
+   }, []);
    return (
       <>
          <Container fluid>
             <Row className="container-catalog-tours flex">
-               {dataPictures.map((item) => (
+               {tours.map((item) => (
                   <Col
                      md={12}
                      lg={6}
@@ -16,7 +28,7 @@ const CatalogTours = () => {
                   >
                      <div className="content-card-catalog">
                         <div className="title-card-catalog-tours">
-                           Title tour
+                           {item.id}
                         </div>
                         <div className="just-a-line-card"></div>
                         <div className="general-card-catalog-tours flex">
@@ -32,13 +44,13 @@ const CatalogTours = () => {
                                     Adult Ticket:
                                  </div>
                                  <div className="valueprice-info-general-card">
-                                    1200000
+                                    {item.price_for_adults}
                                  </div>
                                  <div className="labelprice-info-general-card">
                                     Child Ticket:
                                  </div>
                                  <div className="valueprice-info-general-card">
-                                    1200000
+                                    {item.price_for_children}
                                  </div>
                               </div>
                            </div>
