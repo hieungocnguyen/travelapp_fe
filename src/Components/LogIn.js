@@ -1,17 +1,17 @@
 import { Link } from "react-router-dom";
 import { AiFillCloseCircle } from "react-icons/ai";
 import axios from "axios";
-import API, { endpoints } from "../configs/API";
-import { useEffect, useState } from "react";
+import API, { authAxios, endpoints } from "../configs/API";
+import { useContext, useEffect, useState } from "react";
+import { UserContext } from "../App";
+import cookies from "react-cookies";
 
 const LoginModel = ({ closeModal }) => {
    const [username, setUsername] = useState();
    const [password, setPassword] = useState();
-
+   const [user, dispatch] = useContext(UserContext);
    const [errMsg, setErrMsg] = useState(null);
 
-   //   const res = await API.get(endpoints["oauth2_info"]);
-   //   console.log(res.data);
    const login = async (event) => {
       event.preventDefault();
 
@@ -20,12 +20,22 @@ const LoginModel = ({ closeModal }) => {
             client_id: "C7yBw5T73TgxfdUmBLR4fCA5JEJ0gMEWnLF8O6SV",
             client_secret:
                "bkyn0d0W73zIZdJ4Nd5rJFMwtizbTSelrWZXQYlCNIMPgWzBblL78tw1ZtW1VSxtjBA8ZZw70YKcYiI5A4mvLYvDk8cIYWKjrQpR95jvHxpEXaFg0hclvpny7FSupy72",
-            username: username,
-            password: password,
+            username: "hieuadmin",
+            password: "123456",
             grant_type: "password",
          });
 
-         if (res.status == 200) console.log("Done");
+         if (res.status === 200) {
+            cookies.save("access_token", res.data.access_token);
+            const user = await authAxios().get(endpoints["current_user"]);
+            cookies.save("current_user", user.data);
+            console.log(user.data);
+            dispatch({
+               type: "login",
+               payload: user.data,
+            });
+            closeModal(false);
+         }
       } catch (error) {
          console.info(error);
          setErrMsg("Username hoac password KHONG chinh xac!!!");
