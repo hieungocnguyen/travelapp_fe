@@ -364,7 +364,7 @@
     border-radius: 12px;
     position: absolute;
     top: -30%;
-    box-shadow:0px 8px 12px rgba(247, 37, 133, 0.25);
+    box-shadow:2px 10px 15px rgb(18, 78, 254, 0.2);
 }
 
 .overlay-thumbnail-container-detail-tours{
@@ -373,7 +373,7 @@
     border-radius: 12px;
     position: absolute;
     top: -30%;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 56.04%, #000000 100%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 62.54%, #124efe 140%);
     z-index: 5;
 }
 
@@ -382,7 +382,7 @@
     width: 100%;
     margin: 120px auto 100px;
     padding: 220px 52px 52px 52px;
-    box-shadow: 0px 8px 12px rgba(247, 37, 133, 0.25);
+    box-shadow: 2px 10px 15px rgb(18, 78, 254, 0.2);
     border-radius: 12px;
 
 }
@@ -440,7 +440,7 @@
 {
     padding: 32px !important;
     border-radius: 12px;
-    box-shadow: 0px 8px 12px rgba(247, 37, 133, 0.25);
+    box-shadow: 2px 10px 15px rgb(18, 78, 254, 0.2);
 }
 
 .description-detailTours--title,
@@ -476,7 +476,7 @@
 .feedback-detail-tours{
     padding: 32px !important;
     border-radius: 12px;
-    box-shadow: 0px 8px 12px rgba(247, 37, 133, 0.25);
+    box-shadow: 2px 10px 15px rgb(18, 78, 254, 0.2);
     margin-bottom: 80px;
 }
 
@@ -524,7 +524,7 @@
 .pictures-detail-tours{
     padding: 32px !important;
     border-radius: 12px;
-    box-shadow: 0px 8px 12px rgba(247, 37, 133, 0.25);
+    box-shadow: 2px 10px 15px rgb(18, 78, 254, 0.2);
     margin-bottom: 80px;
 }
 
@@ -574,7 +574,7 @@
 }
 
 .box--shadow{
-    box-shadow:0px 8px 10px rgba(247, 37, 133, 0.25);
+    box-shadow:2px 10px 15px rgb(18, 78, 254, 0.2);
 }
 
 
@@ -664,7 +664,7 @@
     width: 90%;
     margin: 0 auto 64px;
     border-radius: 16px;
-    box-shadow: 0px 8px 12px rgba(247, 37, 133, 0.25);
+    box-shadow: 2px 10px 15px rgb(18, 78, 254, 0.2);
 }
 
 .main-detailNews--post{
@@ -711,7 +711,7 @@
     width: 90%;
     margin: 0 auto 64px;
     border-radius: 16px;
-    box-shadow: 0px 8px 12px rgba(247, 37, 133, 0.25);
+    box-shadow: 2px 10px 15px rgb(18, 78, 254, 0.2);
 }
 
 .comment-detailNews{
@@ -769,7 +769,7 @@
     width: 90%;
     margin: 0 auto 64px;
     border-radius: 16px;
-    box-shadow: 0px 8px 12px rgba(247, 37, 133, 0.25);
+    box-shadow: 2px 10px 15px rgb(18, 78, 254, 0.2);
 }
 
 .relatedNews-detailNews{
@@ -812,7 +812,7 @@
     left: 50%;
     transform: translate(-50%, 0);
     background: white;
-    box-shadow: 0px 12px 10px rgba(247, 37, 133, 0.25);
+    box-shadow: 2px 10px 15px rgb(18, 78, 254, 0.2);
     border-radius: 8px;
     z-index: 30;
 
@@ -952,7 +952,7 @@
     left: 50%;
     transform: translate(-50%, 0);
     background: white;
-    box-shadow: 0px 12px 10px rgba(247, 37, 133, 0.25);
+    box-shadow: 2px 10px 15px rgb(18, 78, 254, 0.2);
     border-radius: 8px;
     z-index: 30;
 }
@@ -987,7 +987,7 @@
 }
 
 .inputPanel-signOn--usernameField{
-    margin: 18px auto;
+    margin: 12px auto;
 }
 
 .usernameField-inputPanel--username{
@@ -996,14 +996,14 @@
 }
 
 .usernameField-inputPanel--inputUsername{
-    border: 3px solid var(--color-primary);
-    border-radius: 12px;
-    width: 387px;
-    height: 51px;
-    padding: 20px;
-    outline: none;
-    font-weight: 700;
-    font-size: 18px;
+    border: 3px solid var(--color-primary) !important;
+    border-radius: 12px !important;
+    width: 340px !important;
+    height: 51px !important;
+    padding: 16px !important;
+    outline: none !important;
+    font-weight: 700 !important;
+    font-size: 18px !important;
 }
 
 .signOn-modal--divine{

@@ -38,7 +38,7 @@ const LoginModel = ({ closeModal }) => {
          }
       } catch (error) {
          console.info(error);
-         setErrMsg("Username hoac password KHONG chinh xac!!!");
+         alert("Login information is incorrect ❌");
       }
    };
 
