@@ -13,6 +13,12 @@ import { createContext, useEffect, useReducer, useState } from "react";
 import myReducer from "./Reducers/MyReducer";
 import cookies from "react-cookies";
 import RecoveryPassword from "./Components/RecoveryPassword";
+import Booking from "./Components/Booking";
+import FbLogin from "./Components/FacebookButton";
+import Apptest from "./Components/Apptest";
+import ProfileUser from "./Components/ProfileUser";
+import Bill from "./Components/Bill";
+import Momo from "./Components/Momo";
 
 export const UserContext = createContext();
 
@@ -27,9 +33,15 @@ function App() {
                <Route path="/" element={<Home />} />
                <Route path="/tours" element={<Tours />} />
                <Route path="/news" element={<News />} />
-               <Route path="/tours/1" element={<DetailTour />} />
-               <Route path="/news/1" element={<DetailNew />} />
+               <Route path="/tours/:tourId" element={<DetailTour />} />
+               <Route path="/booking/:tourId" element={<Booking />} />
+               <Route path="/news/:newsId" element={<DetailNew />} />
+               <Route path="/fblogin/" element={<FbLogin />} />
+               <Route path="/apptest/" element={<Apptest />} />
                <Route path="/recovery/" element={<RecoveryPassword />} />
+               <Route path="/profile/:userId" element={<ProfileUser />} />
+               <Route path="/bill/:userId" element={<Bill />} />
+               {/* <Route path="/momo/" element={<Momo />} /> */}
             </Routes>
             <Footer logo={logoBrand} />
          </UserContext.Provider>

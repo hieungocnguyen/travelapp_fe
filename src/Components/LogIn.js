@@ -5,6 +5,14 @@ import API, { authAxios, endpoints } from "../configs/API";
 import { useContext, useEffect, useState } from "react";
 import { UserContext } from "../App";
 import cookies from "react-cookies";
+import FacebookLogin from "react-facebook-login";
+import FirebaseInit from "../firebase/firebase-init";
+import {
+   getAuth,
+   signInWithPopup,
+   GoogleAuthProvider,
+   signOut,
+} from "firebase/auth";
 
 const LoginModel = ({ closeModal }) => {
    const [username, setUsername] = useState();
@@ -37,13 +45,60 @@ const LoginModel = ({ closeModal }) => {
             closeModal(false);
          }
       } catch (error) {
-         console.info(error);
-         alert("Login information is incorrect ❌");
+         console.info(error, error.stack);
+         alert(`Login information is incorrect ❌`);
+      }
+   };
+
+   FirebaseInit();
+   const provider = new GoogleAuthProvider();
+   const handleGoogleSignedIn = () => {
+      const auth = getAuth();
+      console.log(auth);
+      signOut(auth);
+      signInWithPopup(auth, provider).then(async (result) => {
+         const googleAccess = await API.post(endpoints["google-access"], {
+            auth_token: result._tokenResponse.oauthIdToken,
+         });
+         console.log(googleAccess.data);
+         cookies.save("access_token", googleAccess.data.tokens.access);
+         const user = await authAxios().get(endpoints["current_user"]);
+         cookies.save("current_user", user.data);
+         console.log(user.data);
+         dispatch({
+            type: "login",
+            payload: user.data,
+         });
+         closeModal(false);
+      });
+   };
+
+   const responseFacebook = async (response) => {
+      try {
+         const facebookAccess = await API.post(endpoints["facebook-access"], {
+            auth_token: response.accessToken,
+         });
+         console.log(facebookAccess.data.tokens.access);
+         if (facebookAccess.status === 400) {
+            console.log(facebookAccess.data.auth_token);
+         }
+         cookies.save("access_token", facebookAccess.data.tokens.access);
+         const user = await authAxios().get(endpoints["current_user"]);
+         cookies.save("current_user", user.data);
+         console.log(user.data);
+         dispatch({
+            type: "login",
+            payload: user.data,
+         });
+         closeModal(false);
+      } catch (error) {
+         alert(error.response.data.auth_token);
       }
    };
 
    return (
       <>
+         <div className="background-blur-modal"></div>
          <div className="login-model--background">
             <div className="login-modalContainer--close">
                <button
@@ -108,11 +163,24 @@ const LoginModel = ({ closeModal }) => {
                   </div>
                   <div className="loginOtherWay-login-buttonsLogin">
                      <div className="buttonsLogin-loginOtherWay--facebook">
-                        <Link to="/">Facebook</Link>
+                        <div className="App">
+                           <FacebookLogin
+                              appId="1351993755298694"
+                              autoLoad={false}
+                              fields="name,email,picture"
+                              callback={responseFacebook}
+                           />
+                        </div>
+                        {/* <Link to="/fblogin" onClick={() => closeModal(false)}>
+                              <FbLogin />
+                           </Link> */}
                      </div>
-                     <div className="buttonsLogin-loginOtherWay--google">
-                        <Link to="/">Google</Link>
-                     </div>
+                     <button
+                        className="buttonsLogin-loginOtherWay--google"
+                        onClick={handleGoogleSignedIn}
+                     >
+                        Log in with Google
+                     </button>
                   </div>
                </div>
             </div>

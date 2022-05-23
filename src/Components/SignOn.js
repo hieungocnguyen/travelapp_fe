@@ -38,12 +38,13 @@ const SignOnModal = ({ closeModal }) => {
             alert("Sign on successful");
          }
       } catch (error) {
-         console.error(error);
+         alert(error.message);
       }
    };
 
    return (
       <>
+         <div className="background-blur-modal"></div>
          <div className="signOn--modal">
             <div className="signOn-Modal--close">
                <button
@@ -85,15 +86,17 @@ const SignOnModal = ({ closeModal }) => {
                            }
                         ></Form.Control>
                      </Form.Group>
-                     {/* <div className="inputPanel-signOn--usernameField">
-                           <div className="usernameField-inputPanel--username">
-                              Confirm Password
-                           </div>
-                           <input
-                              type="password"
-                              className="usernameField-inputPanel--inputUsername"
-                           ></input>
-                        </div> */}
+                     {/* <Form.Group className="inputPanel-signOn--usernameField">
+                        <Form.Label className="usernameField-inputPanel--username">
+                           Confirm Password
+                        </Form.Label>
+                        <Form.Control
+                           type="password"
+                           className="usernameField-inputPanel--inputUsername"
+                           value={confirmPass}
+                           onChange={checkConfirmPass}
+                        ></Form.Control>
+                     </Form.Group> */}
                      <Form.Group className="inputPanel-signOn--usernameField">
                         <Form.Label className="usernameField-inputPanel--username">
                            Email address
@@ -129,20 +132,6 @@ const SignOnModal = ({ closeModal }) => {
                         I already have an account
                      </Link>
                   </Form>
-                  <div className="signOn-modal--divine"></div>
-                  <div className="signOn-modal--otherWayPanel">
-                     <div className="signOnOtherWay-signOn-title">
-                        Or sign on with:
-                     </div>
-                     <div className="signOnOtherWay-signOn-buttonsSignOn">
-                        <div className="buttonsSignOn-signOnOtherWay--facebook">
-                           <Link to="/">Facebook</Link>
-                        </div>
-                        <div className="buttonsSignOn-signOnOtherWay--google">
-                           <Link to="/">Google</Link>
-                        </div>
-                     </div>
-                  </div>
                </div>
             </div>
          </div>

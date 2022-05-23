@@ -178,13 +178,28 @@
 
 }
 
+.searchbar-tours{
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-search-keyword--tours{
+    background: var(--color-primary);
+    height: 100%;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-weight: 700;
+    color: white;
+}
+
 .input-searchbar-tours{
     width: 40vw;
     padding: 15px;
     border: 3px solid var(--color-primary);
     font-weight: 700;
     outline: none;
-    margin-right: 22px;
+    margin-right: 8px;
     font-size: 18px;
     border-radius: 8px;
 }
@@ -204,16 +219,41 @@
 }
 
 #dropdown-basic{
-    padding:15px;
+    padding:18px;
     background: var(--color-primary);
     font-weight: 700;
     outline: none;
     border: none;
-    width: 180px;
+    width: 120px;
 }
 
 .dropdown-childs{
     width: 180px;
+}
+
+.secondBar-filter-tours{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+}
+
+.button-secondBar-tours{
+    border: 8px;
+    margin-top: 6px;
+    background: var(--color-primary);
+    color: white;
+    border-radius: 4px;
+    font-weight: 700;
+    padding: 8px 16px;
+
+}
+
+.input-searchBarSecond-tours{
+    margin-right: 12px;
+    border: 3px solid var(--color-primary);
+    padding: 4px;
+    border-radius: 8px;
+    font-weight: 700;
 }
 
 /* ----------- CATALOG TOURS ---------- */
@@ -325,7 +365,6 @@
 .paginator-body-tours a.active{
     background: var(--color-primary);
     color: white;
-    pointer-events: none;
 }
 
 .paginator-body-tours a:hover{
@@ -423,6 +462,7 @@
     font-weight: 700;
     color: black;
     border-radius: 8px;
+    cursor: pointer;
 }
 
 .info-container-detail-tours--buttonBooking:hover{
@@ -500,6 +540,9 @@
     font-size: 24px;
     font-weight: 800;
     padding-bottom: 14px;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
 }
 
 .comment-detailTour--username-userInfo{
@@ -806,6 +849,14 @@
 
 
 /* ========== MODEL LOGIN STYLE ============= */
+.background-blur-modal{
+    width: 95vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    z-index: 20;
+}
+
 .login-model--background{
     position: absolute;
     top: 84px;
@@ -920,29 +971,6 @@
     text-align: center;
 }
 
-.buttonsLogin-loginOtherWay--facebook a{
-    width: 340px;
-    height: 44px;
-    background: #3F37C9;
-    border-radius: 6px;
-    color: white;
-    margin: 12px auto;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-}
-
-.buttonsLogin-loginOtherWay--google a{
-    width: 340px;
-    height: 44px;
-    background: #FF3A44;
-    border-radius: 6px;
-    color: white;
-    margin: 20px auto;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-}
 
 /* =========== SIGN ON STYLE =========== */
 
@@ -1014,8 +1042,7 @@
 }
 
 .inputPanel-signOn--buttonLogin{
-    margin: 24px;
-    text-align: center;
+    margin: 24px 0;
 }
 
 .buttonSignOn-inputPanel-submit{
@@ -1071,12 +1098,17 @@
 }
 
 /* ========= Logged in========= */
+.signout-right-header{
+    position: relative;
+}
 
 .user-Header-avatarContainer{
     width: 50px;
     height: 50px;
     overflow: hidden;
     border-radius: 50%;
+    border: 4px solid var(--color-primary);
+    cursor: pointer;
 }
 
 .user-Header-avatar{
@@ -1124,4 +1156,239 @@
 .button-recoveryPassword:hover{
     background: var(--color-primary);
     color: white;
+}
+
+/* ====== BOOKING TOUR STYLE ======== */
+.booking-tour-container{
+    width: 500px;
+    margin: 30px auto;
+}
+
+/* ====== FACEBOOK GOOGLE BUTTON STYLE ========= */
+
+
+.kep-login-facebook{
+    text-transform:none !important;
+    padding: 8px 24px !important;
+    margin: 8px 12px;
+}
+
+.buttonsLogin-loginOtherWay--google{
+    font-weight: 700;
+    border: none;
+    background-color: rgb(253, 62, 62);
+    color: white;
+    padding: 8px 24px !important;
+    margin: 8px 12px;
+}
+
+/* ========= POPUP HEADER ======= */
+.showPopup{
+    display: flex !important;
+}
+
+.user-popup-header{
+    position: absolute;
+    top: 64px;
+    right: 0px;
+    border-radius: 8px;
+    border: 3px solid var(--color-primary);
+    display: flex;
+    flex-direction: column;
+    z-index: 50;
+    display: none;
+    background-color: white;
+}
+
+.user-popup-header a{
+    padding: 3px 20px 0px;
+    color: var(--color-primary);
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.user-popup-header a:hover{
+    color: #000000;
+}
+
+
+.avatar-user-profile{
+    width: 150px;
+}
+
+/* ============== BILL STYLE ============= */
+
+.bill-container{
+    width: 80%;
+    margin: 24px auto;
+}
+
+.title-bill{
+    font-weight: 600;
+}
+.bill-unpaid{
+    display: flex;
+    justify-content: space-between;
+    margin: 12px 0;
+    background: white;
+    padding: 20px;
+    border: 3px solid var(--color-primary);
+    border-radius: 8px;
+}
+
+.infoBill-unpaid{
+    font-weight: 700;
+}
+
+.button-byCash-bill{
+    height: 100%;
+    width: 70px;
+    background: var(--color-primary);
+    border: none;
+    color: white;
+    font-weight: 700;
+    border-radius: 8px;
+}
+
+.button-byCash-bill:hover{
+    background: white;
+    color: var(--color-primary);
+    border: 3px solid var(--color-primary);
+}
+
+
+.paid{
+    background-color: aliceblue !important;
+}
+
+/* ========== PROFILE USER ========== */
+.profile-user-container{
+    width: 60%;
+    margin: 24px auto;
+}
+.avatar-user-profile{
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+}
+.inputPanel-avatar-profile{
+    width: 50%;
+}
+
+.header-profile-user{
+    font-weight: 800;
+    font-size: 42px;
+    text-align: center;
+}
+
+
+.info-username-profile-user,
+.info-email-profile-user{
+    font-weight: 700;
+    font-size: 18px;
+    margin: 4px 0;
+}
+
+/* ====== RATING TOUR DETAILS STYLE ======== */
+
+.rating-container-detailTour{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    
+}
+
+.rating-detail-tours{
+    background-color: white;
+    box-shadow:2px 10px 15px rgb(18, 78, 254, 0.2);
+    padding: 24px;
+    border-radius: 12px;
+}
+
+.button-rating-detailTour{
+    background: var(--color-primary);
+    color: white;
+    padding: 12px;
+    border:none;
+    border-radius: 8px;
+    width: 82px;
+}
+
+.rating-user-item-detailTour{
+    margin: 12px;
+}
+
+/* ============ DETAIL TOURS STYLE ========== */
+.pictures-tour-slick-detailTour{
+    overflow: hidden;
+    height: 620px;
+}
+
+.pictures-tour-slick-detailTour img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.form-change-password{
+    width: 60%;
+    margin: 24px auto;
+}
+
+.header-changePassword-user{
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.button-changepassword-container{
+    margin-top: 20px;
+}
+
+.starAverage-rating{
+    padding-left: 20px;
+    color: var(--color-primary);
+}
+
+.icon-star-avarage{
+    font-size: 32px;
+}
+
+.view-count{
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* ========= BOOKING TOUR STYLE ========== */
+
+.title-booking-tour{
+    font-weight: 700;
+    font-size: 44px;
+    text-align: center;
+    margin:30px;
+}
+
+.title-price-bookin-tour{
+    font-weight: 700;
+}
+
+.label-totalprice-booking{
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 18px;
+}
+
+.button-booking-tour{
+    padding: 8px 24px !important;
+}
+
+.input-booking{
+    border: 3px solid var(--color-primary) !important;
+}
+
+.total-price-booking{
+    color: var(--color-primary);
 }

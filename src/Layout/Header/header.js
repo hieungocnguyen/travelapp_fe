@@ -1,16 +1,23 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { UserContext } from "../../App";
 import LoginModel from "../../Components/LogIn";
 import SignOnModal from "../../Components/SignOn";
 import API, { endpoints } from "../../configs/API";
 import "./styleheader.css";
 import cookies from "react-cookies";
+import {
+   getAuth,
+   signInWithPopup,
+   GoogleAuthProvider,
+   signOut,
+} from "firebase/auth";
 
 const Header = (props) => {
    const [openModalSignIn, setOpenModalSignIn] = useState(false);
    const [openModalSignOn, setOpenModalSignOn] = useState(false);
-
+   const nav = useNavigate();
+   const [isPopUp, setPopup] = useState("true");
    const [clientId, setClientId] = useState();
    const [clientSecret, setClientSecret] = useState();
 
@@ -30,6 +37,7 @@ const Header = (props) => {
       cookies.remove("access_token");
       cookies.remove("current_user");
       dispatch({ type: "logout" });
+      nav("/");
    };
 
    let replaceRightPart = //phan nay la default right part header
@@ -44,38 +52,70 @@ const Header = (props) => {
             >
                Log in
             </a>
-            <a
-               href="#"
+            <Link
+               to="/"
                className="signout-right-header hover"
                onClick={() => {
                   setOpenModalSignOn(true);
                }}
             >
                Sign on
-            </a>
+            </Link>
          </>
       );
+
+   const ToggleClass = () => {
+      setPopup(!isPopUp);
+   };
+
    if (user != null) {
+      console.log(user);
       replaceRightPart = (
          <>
-            <a
-               href="#"
-               className="login-right-header hover"
-               onClick={() => {
-                  setOpenModalSignIn(true);
-               }}
-            >
+            <div href="#" className="login-right-header">
                {user.username}
-            </a>
-            <a href="#" className="signout-right-header hover" onClick={logout}>
-               <div className="user-Header-avatarContainer">
+            </div>
+            <div className="signout-right-header">
+               <div
+                  className="user-Header-avatarContainer"
+                  onClick={ToggleClass}
+               >
                   <img
                      src={user.avatar_path}
                      alt="avatar-user"
                      className="user-Header-avatar"
                   />
                </div>
-            </a>
+               <div
+                  className={
+                     isPopUp
+                        ? "user-popup-header"
+                        : "user-popup-header showPopup"
+                  }
+               >
+                  <Link
+                     to={`/bill/${user.id}`}
+                     className="user-popup-header--profile"
+                     onClick={ToggleClass}
+                  >
+                     Bill
+                  </Link>
+                  <Link
+                     to={`/profile/${user.id}`}
+                     className="user-popup-header--profile"
+                     onClick={ToggleClass}
+                  >
+                     Profile
+                  </Link>
+                  <a
+                     href="#"
+                     className="user-popup-header--logout"
+                     onClick={logout}
+                  >
+                     Logout
+                  </a>
+               </div>
+            </div>
          </>
       );
    }
