@@ -25,7 +25,7 @@ const Footer = (props) => {
                   <AiFillFacebook />
                </a>
                <a
-                  href="https://www.facebook.com/"
+                  href="https://www.instagram.com/hiewithu/"
                   target="_blank"
                   rel="noreferrer noopener"
                   className="hover"
