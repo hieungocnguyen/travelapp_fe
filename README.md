@@ -2,6 +2,6 @@
 
 ## Contributors:
 ### Front - end: Nguyen Ngoc Hieu
-#### ReactJS
+#### `ReactJS`
 ### Back - end: Nguyen Van Thu
-#### Django
+#### `Django`
