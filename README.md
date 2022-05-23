@@ -1,7 +1,7 @@
 # A Travel Project of Modern Technology Programing Subject 
 
 ## Contributors:
-### Front - end: Nguyen Ngoc Hieu
+### Front - end: `Nguyen Ngoc Hieu`
 #### `ReactJS`
-### Back - end: Nguyen Van Thu
+### Back - end: `Nguyen Van Thu`
 #### `Django`
