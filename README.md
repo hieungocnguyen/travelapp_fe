@@ -1,4 +1,4 @@
-### **A Travel App - Course Project**
+## **A Travel App - Course Project**
 
 ### This project is build with ReactJS and Django Rest Framework
 [[API](https://github.com/thuvan2512/travelapp-django) - Thu Van] and the database is MySQL.
